@@ -1,0 +1,27 @@
+.calendar {
+   width: 100%;
+   margin: 20px 0;
+}
+
+.week {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar .day {
+    position: relative; 
+    width: calc(100% / 7);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.173);
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

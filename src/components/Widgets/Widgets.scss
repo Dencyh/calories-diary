@@ -1,0 +1,265 @@
+.widget {
+    background: #00000015;
+    /* padding: 40px 45px 20px; */
+    font-family: 'Open Sans', sans-serif;
+    color: #d5d5d5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.background-none {
+    background: none;
+}
+
+.widget__wrapper {
+    padding: 0px 45px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 48%;
+}
+
+.mini {
+    height: 48%;
+}
+
+.small {
+    width: 32%;
+
+}
+
+.wide {
+    width: 100%;
+    height: 48%;
+    padding: 0 40px 50px 40px;
+
+}
+
+
+.widget__main-info {
+    margin: 40px;
+}
+
+.widget__header {
+    text-transform: uppercase;
+    font-weight: 700;  
+}
+
+
+
+.widget__main-value {
+    font-size: 96px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.widget__text {
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.green {
+    color: #3FDA7D;
+}
+
+.red {
+    color: #FF5151;
+}
+
+
+.widget__additional-info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+.widget__additional-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.283);
+    width: 50%;
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.border-right {
+    border-right: 1px solid rgba(255, 255, 255, 0.283);
+}
+
+.widget__sub-value {
+    font-size: 64px;
+    font-weight: 300;
+    color: #fff;
+   
+}
+
+
+
+// Widget Macros
+.nutrients__progress-bar {
+    width: 82%;
+    height: 12px;
+    margin: 15px 0;
+    background: #C6C6C6;
+    position: absolute;
+
+
+    border-radius: 15px;
+}
+
+.nutrients__progress {
+    position: absolute;
+    width: 20%;
+    height: 12px;
+    margin: 15px 0;
+    background: #d81818;
+
+    position: absolute;
+  
+    stroke-width: 100px;
+
+    border-radius: 15px;
+}
+
+.protein {
+background: #36E8D2;
+width: 23%;
+}
+
+.fat {
+    background: #F9ED37;
+    width: 35%;
+}
+
+.carbs {
+    background: #EA4289;
+    width: 50%;
+}
+
+
+// ============== Today page widgets =======================
+
+.wrap{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+}
+
+.wrap--justify{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px;
+
+    position: absolute;
+
+}
+
+.add-meal-button{
+    width: 115px;
+    height: 45px;
+
+   
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    background: #8F5EBF;
+   
+    border-radius: 45px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+.add-meal-button:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0px 15px 20px rgba(28, 28, 28, 0.1);
+    color: #000;
+    transform: translateY(-8px);
+  }
+
+  .note-emoji {
+    height: 55px;
+    width: 55px;
+    
+    cursor: pointer;
+
+    transition: all 0.3s ease 0s;
+}
+
+
+.not-active {
+    -webkit-filter: grayscale(100%) ;
+    filter: grayscale(100%) brightness(65%);
+    transform: translate3d(0,0,0)
+
+}
+
+.note-emoji:hover {
+    -webkit-transform: scale(1.1);  
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.not-active:hover {
+    filter: grayscale(50%) brightness(100%)  
+}
+
+.weight-wrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+.weight-button {
+    padding: 0;
+    margin: 0 30px;
+    height: 50px;
+    width: 50px;
+
+    background: none;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    
+    cursor: pointer;
+    outline: none;
+  
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0px 15px 20px rgba(28, 28, 28, 0.1);
+    transform: translate3d(0,0,0);
+    transition: all 0.3s ease 0s;
+}
+
+.weight-button:hover {
+    -webkit-transform: scale(1.1);  
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);    
+    
+}
