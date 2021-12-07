@@ -11,13 +11,14 @@ function Dashboard() {
             <div className='grid'>
                 {/* <div className='one'> </div> */}
 
-                <div className='top'>
+                <div className='row'>
                     <CurrentColoriesWidget />
                     <AnalyseDayWidget />
                     <MacrosLinesWidget />
                 </div>
-                <ChartWidget />
-
+                <div className='row'>
+                    <ChartWidget />
+                </div>
             </div>
         </div>
     )

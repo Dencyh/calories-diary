@@ -7,12 +7,12 @@ function Food() {
     return (
         <div className='main-view'>
             <div className='grid'>
-                <div className='top'>
+                <div className='row'>
                     <CurrentColoriesWidget />
                     <AnalyseDayWidget />
                     <MacrosLinesWidget />
                 </div>
-                <div className='top'>
+                <div className='row'>
                     <CurrentColoriesWidget />
                     <AnalyseDayWidget />
                     <MacrosLinesWidget />
