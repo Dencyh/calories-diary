@@ -65,21 +65,20 @@ function Calendar(props) {
                             className='calendar__arrow-button left'
                             onClick={() => setValue(previousMonth())}
                         ></div>
-                        {console.log(previousMonth())}
+
                         <div
                             className='calendar__current-month'
                             onClick={() => setValue(currentMonth())}
                         >{currentMonthName(value)} {currentYear(value)}</div>
-                        {console.log(currentMonth())}
                         <div
                             className='calendar__arrow-button right'
                             onClick={() => setValue(nextMonth())}
                         ></div>
                     </div>
                     <div className="calendar__body">
-                        {calendar.map((week) => <div className='week'>
+                        {calendar.map((week, index) => <div className='week' key={index}>
                             {
-                                week.map(day => <div className={dayStyles(day, value)}
+                                week.map((day, index) => <div key={index} className={dayStyles(day, value)}
                                     onClick={() => { setValue(day) }}
                                 >
                                     {day.format('D').toString()}

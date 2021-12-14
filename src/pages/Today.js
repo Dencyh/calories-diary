@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import AddMealWidget from '../components/Widgets/AddMealWidget'
+import React from 'react'
+import MealWidget from '../components/Widgets/MealWidget'
 import WeightWidget from '../components/Widgets/WeightWidget'
 import NotesWidget from '../components/Widgets/NotesWidget'
 import Calendar from '../components/calendar/Calendar'
-import AddNewFood from '../components/Widgets/AddNewFood'
+
 
 function Today() {
 
@@ -12,13 +12,13 @@ function Today() {
         <div className='main-view'>
             <div className='grid'>
                 <div className='row'>
-                    <AddMealWidget widgetTitle='breakfast' />
-                    <AddMealWidget widgetTitle='lunch' />
+                    <MealWidget widgetTitle='breakfast' />
+                    <MealWidget widgetTitle='lunch' />
                     <Calendar widgetTitle='calendar' />
                 </div>
                 <div className='row'>
-                    <AddMealWidget widgetTitle='snacks' />
-                    <AddMealWidget widgetTitle='dinner' />
+                    <MealWidget widgetTitle='snacks' />
+                    <MealWidget widgetTitle='dinner' />
                     <div className='widget small background-none'>
                         <WeightWidget widgetTitle='weight' />
                         <NotesWidget widgetTitle='notes' />

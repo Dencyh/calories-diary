@@ -6,19 +6,7 @@ import MacrosLinesWidget from '../components/Widgets/MacrosLinesWidget'
 function Food() {
     return (
         <div className='main-view'>
-            <div className='grid'>
-                <div className='row'>
-                    <CurrentColoriesWidget />
-                    <AnalyseDayWidget />
-                    <MacrosLinesWidget />
-                </div>
-                <div className='row'>
-                    <CurrentColoriesWidget />
-                    <AnalyseDayWidget />
-                    <MacrosLinesWidget />
-                </div>
-
-            </div>
+            Food page
         </div>
     )
 }

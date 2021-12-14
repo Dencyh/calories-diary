@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -9,9 +9,9 @@ import {
     Tooltip,
     Legend,
     Filler
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
-import faker from 'faker';
+} from 'chart.js'
+import { Line } from 'react-chartjs-2'
+import faker from 'faker'
 
 ChartJS.register(
     CategoryScale,
@@ -52,6 +52,7 @@ const options = {
         }
     },
     responsive: true,
+    maintainAspectRatio: false,
     title: {
         display: true,
     },
@@ -75,9 +76,9 @@ const data = {
     ],
 };
 
-function createGradient(ctx) {
+function createGradient(ctx, clientHeight) {
 
-    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    const gradient = ctx.createLinearGradient(0, 0, 0, clientHeight);
 
     gradient.addColorStop(0.2, 'rgba(215,130,255, 1)');
     gradient.addColorStop(1, '#742EB9');
@@ -92,8 +93,19 @@ function Chart() {
         datasets: [],
     });
 
+    const chartWrapperRef = useRef(null)
+
+
+
+
     useEffect(() => {
         const chart = chartRef.current;
+
+        const chartWrapper = chartWrapperRef.current
+
+
+
+
 
         if (!chart) {
             return;
@@ -103,9 +115,9 @@ function Chart() {
             ...data,
             datasets: data.datasets.map(dataset => ({
                 ...dataset,
-                borderColor: createGradient(chart.ctx),
+                borderColor: createGradient(chart.ctx, chartWrapper.clientHeight),
                 fill: 'start',
-                backgroundColor: createGradient(chart.ctx),
+                backgroundColor: createGradient(chart.ctx, chartWrapper.clientHeight),
                 pointRadius: 5,
                 pointBorderColor: 'rgb(100, 100, 100)',
                 tension: 0
@@ -115,13 +127,18 @@ function Chart() {
         setChartData(chartData);
     }, []);
 
+
+
+
+
     return (
-        <div className="chart-wrapper" >
+        <div className="chart-wrapper"
+            ref={chartWrapperRef}
+        >
             <Line
                 ref={chartRef}
                 options={options}
                 data={chartData}
-                height={'70px'}
             />
 
         </div>

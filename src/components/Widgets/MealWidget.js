@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group'
 import AddNewFood from './AddNewFood'
 import { cancelButtonImmage } from '../../Images/cancelButtonImmage'
 
-function AddMealWidget(props) {
+function MealWidget(props) {
     const [addButtonDisplay, setAddButtonDisplay] = useState(true)
     const [cancelButtonDisplay, setCancelButtonDisplay] = useState(false)
 
@@ -34,7 +34,7 @@ function AddMealWidget(props) {
                 <CSSTransition
                     in={addButtonDisplay}
                     timeout={200}
-                    className='add-meal-button'
+                    className='new-entry-button'
                     unmountOnExit
                 >
                     <button
@@ -52,11 +52,11 @@ function AddMealWidget(props) {
                     className='new-food-form'
                     unmountOnExit
                 >
-                    <AddNewFood />
+                    <AddNewFood mealNumber={props.widgetTitle} setAddButtonDisplay={setAddButtonDisplay} setCancelButtonDisplay={setCancelButtonDisplay} />
                 </CSSTransition>
             </div>
         </div>
     )
 }
 
-export default AddMealWidget
+export default MealWidget
