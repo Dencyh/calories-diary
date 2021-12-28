@@ -115,6 +115,7 @@ function AddNewFood({ setAddButtonDisplay, setCancelButtonDisplay, mealNumber })
 
             <div className='meal-header'>
                 <div className='meal-header__item'>
+                    <div ></div>
                     <label className='value-label' htmlFor="name">Name</label>
                     <input
                         className='value-input'

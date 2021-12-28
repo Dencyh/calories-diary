@@ -414,6 +414,8 @@ width: 23%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: relative;
 }
 
 .meal-header__item {
@@ -484,6 +486,24 @@ width: 23%;
 .dropdown-datalist__item:hover {
     color: #3fda5e;
 }
+
+// dropdown arrow
+.arrow-button {
+    width: 0; 
+    height: 0; 
+    cursor: pointer;   
+    
+    position: absolute;
+
+}
+
+.arrow-button .botton {
+    margin-right: 20px;
+  
+    border: 10px solid transparent;  
+    border-right: 10px solid #d5d5d5;
+}
+
 
 
 
